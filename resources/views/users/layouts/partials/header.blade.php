@@ -1,7 +1,7 @@
 <header class="header-one">
     <div class="top-header">
         <div class="container clearfix">
-            <div class="logo float-left"><a href="index.html"><img src="users/images/logo/logo.png" alt=""></a>
+            <div class="logo float-left"><a href="index"><img src="users/images/logo/logo.png" alt=""></a>
             </div>
             <div class="address-wrapper float-right">
                 <ul>
@@ -28,50 +28,68 @@
                 <div class="menu-wrapper float-left">
                     <nav id="mega-menu-holder" class="clearfix">
                         <ul class="clearfix">
-                            <li class="active"><a href="#">Profil Desa</a>
+                            <li class="{{ Request::is('beranda') ? 'active' : '' }}">
+                                <a href="{{ route('beranda') }}">Profil Desa</a>
                                 <ul class="dropdown">
-                                    <li><a href="/beranda">Beranda</a></li>
-                                    <li><a href="/tentang-kami">Tentang Kami</a></li>
-                                    <li><a href="/visi-misi">Visi Misi</a></li>
-                                    <li><a href="/sejarah-desa">Sejarah Desa</a></li>
-                                    <li><a href="/geografis-desa">Geografis Desa</a></li>
-                                    <li><a href="/demografi-desa">Demografi Desa</a></li>
+                                    <li class="{{ Request::is('beranda') ? 'active' : '' }}"><a
+                                            href="{{ route('beranda') }}">Beranda</a></li>
+                                    <li class="{{ Request::is('tentang-kami') ? 'active' : '' }}"><a
+                                            href="{{ route('tentang.kami') }}">Tentang Kami</a></li>
+                                    <li class="{{ Request::is('visi-misi') ? 'active' : '' }}"><a
+                                            href="{{ route('visi.misi') }}">Visi Misi</a></li>
+                                    <li class="{{ Request::is('sejarah-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('sejarah.desa') }}">Sejarah Desa</a></li>
+                                    <li class="{{ Request::is('geografis-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('geografis.desa') }}">Geografis Desa</a></li>
+                                    <li class="{{ Request::is('demografi-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('demografi.desa') }}">Demografi Desa</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Pemerintahan</a>
+                            <li
+                                class="{{ Request::is('struktur-organisasi', 'perangkat-desa', 'lembaga-desa') ? 'active' : '' }}">
+                                <a href="#">Pemerintahan</a>
                                 <ul class="dropdown">
-                                    <li><a href="struktur-orginisasi.html">Struktur Organisasi</a></li>
-                                    <li><a href="perangkat-desa.html">Perangkat Desa</a></li>
-                                    <li><a href="lembaga-desa.html">Lembaga Desa</a></li>
+                                    <li class="{{ Request::is('struktur-organisasi') ? 'active' : '' }}"><a
+                                            href="{{ route('struktur.organisasi') }}">Struktur Organisasi</a></li>
+                                    <li class="{{ Request::is('perangkat-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('perangkat.desa') }}">Perangkat Desa</a></li>
+                                    <li class="{{ Request::is('lembaga-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('lembaga.desa') }}">Lembaga Desa</a></li>
                                 </ul>
                             </li>
-                            <li><a href="layanan.html">Layanan</a></li>
-                            <li><a href="#">Informasi</a>
+                            <li class="{{ Request::is('layanan') ? 'active' : '' }}">
+                                <a href="{{ route('layanan') }}">Layanan</a>
+                            </li>
+                            <li
+                                class="{{ Request::is('berita', 'pengumuman', 'agenda-kegiatan', 'galeri', 'download', 'apbd-desa') ? 'active' : '' }}">
+                                <a href="#">Informasi</a>
                                 <ul class="dropdown">
-                                    <li><a href="berita.html">Berita</a></li>
-                                    <li><a href="pengumuman.html">Pengumuman</a></li>
-                                    <li><a href="agenda-kegiatan.html">Agenda Kegiatan</a></li>
-                                    <li><a href="galeri.html">Galeri</a></li>
-                                    <li><a href="download.html">Download</a></li>
-                                    <li><a href="apbd-desa.html">APBD Desa</a></li>
+                                    <li class="{{ Request::is('berita') ? 'active' : '' }}"><a
+                                            href="{{ route('berita') }}">Berita</a></li>
+                                    <li class="{{ Request::is('pengumuman') ? 'active' : '' }}"><a
+                                            href="{{ route('pengumuman') }}">Pengumuman</a></li>
+                                    <li class="{{ Request::is('agenda-kegiatan') ? 'active' : '' }}"><a
+                                            href="{{ route('agenda.kegiatan') }}">Agenda Kegiatan</a></li>
+                                    <li class="{{ Request::is('galeri') ? 'active' : '' }}"><a
+                                            href="{{ route('galeri') }}">Galeri</a></li>
+                                    <li class="{{ Request::is('download') ? 'active' : '' }}"><a
+                                            href="{{ route('download') }}">Download</a></li>
+                                    <li class="{{ Request::is('apbd-desa') ? 'active' : '' }}"><a
+                                            href="{{ route('apbd.desa') }}">APBD Desa</a></li>
                                 </ul>
                             </li>
-                            <li><a href="potensi-desa.html">Potensi Desa</a></li>
-                            <li><a href="produk-hukum.html">Produk Hukum</a></li>
+                            <li class="{{ Request::is('potensi-desa') ? 'active' : '' }}">
+                                <a href="{{ route('potensi.desa') }}">Potensi Desa</a>
+                            </li>
+                            <li class="{{ Request::is('produk-hukum') ? 'active' : '' }}">
+                                <a href="{{ route('produk.hukum') }}">Produk Hukum</a>
+                            </li>
                         </ul>
                     </nav> <!-- /#mega-menu-holder -->
                 </div> <!-- /.menu-wrapper -->
 
                 <div class="right-widget float-right">
                     <ul>
-                        {{-- <li class="social-icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </li> --}}
                         <li class="cart-icon">
                             <a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
                         </li>
@@ -91,5 +109,6 @@
             </div> <!-- /.bg-wrapper -->
         </div> <!-- /.container -->
     </div> <!-- /.theme-menu-wrapper -->
+
 
 </header> <!-- /.header-one -->
