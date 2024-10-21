@@ -3,19 +3,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-sm-6 about-widget">
-                    <h6 class="title">About OUR Consulting</h6>
-                    <p>That started from this tropic port aboard this tiny ship today still want by theam government
-                        they survive on up to thetre east side to a deluxe as soldiers of artics fortune.</p>
-                    <div class="queries"><i class="flaticon-phone-call"></i> Any Queries : <a href="#">(+1) 234 567
-                            900</a></div>
+                    <h6 class="title">Tentang Konsultasi Kami</h6>
+                    <p>Kami membantu bisnis berkembang dengan solusi inovatif dan tepat. Bergabunglah dengan kami!</p>
+                    <div class="queries">
+                        <i class="flaticon-phone-call"></i> Pertanyaan: <a href="#">(+1) 234 567 900</a>
+                    </div>
                 </div> <!-- /.about-widget -->
                 <div class="col-xl-4 col-lg-3 col-sm-6 footer-recent-post">
-                    <h6 class="title">RECENT POSTS</h6>
+                    <h6 class="title">POSTINGAN TERBARU</h6>
                     <ul>
                         <li class="clearfix">
                             <img src="users/images/blog/1.jpg" alt="" class="float-left">
                             <div class="post float-left">
-                                <a href="blog-details.html">Till wanted by theam govern they survive as soldiers.</a>
+                                <a href="blog-details.html">Strategi Bisnis yang Efektif.</a>
                                 <div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i> Feb 06, 2018
                                 </div>
                             </div>
@@ -23,7 +23,7 @@
                         <li class="clearfix">
                             <img src="users/images/blog/2.jpg" alt="" class="float-left">
                             <div class="post float-left">
-                                <a href="blog-details.html">World don't move to beat of just one drum.</a>
+                                <a href="blog-details.html">Inovasi dalam Dunia Bisnis.</a>
                                 <div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i> Mar 20, 2018
                                 </div>
                             </div>
@@ -31,22 +31,22 @@
                     </ul>
                 </div> <!-- /.footer-recent-post -->
                 <div class="col-xl-2 col-lg-3 col-sm-6 footer-list">
-                    <h6 class="title">SOLUTIONS</h6>
+                    <h6 class="title">SOLUSI KAMI</h6>
                     <ul>
-                        <li><a href="#">Travel and Aviation</a></li>
-                        <li><a href="#">Business Services</a></li>
-                        <li><a href="#">Consumer Products</a></li>
-                        <li><a href="#">Financial Services</a></li>
-                        <li><a href="#">Software Research</a></li>
-                        <li><a href="#">Quality Resourcing</a></li>
+                        <li><a href="#">Travel dan Penerbangan</a></li>
+                        <li><a href="#">Layanan Bisnis</a></li>
+                        <li><a href="#">Produk Konsumen</a></li>
+                        <li><a href="#">Layanan Keuangan</a></li>
+                        <li><a href="#">Riset Perangkat Lunak</a></li>
+                        <li><a href="#">Sumber Daya Berkualitas</a></li>
                     </ul>
                 </div> <!-- /.footer-list -->
                 <div class="col-xl-3 col-lg-2 col-sm-6 footer-newsletter">
-                    <h6 class="title">NEWSLETTER</h6>
+                    <h6 class="title">BULETIN</h6>
                     <form action="#">
-                        <input type="text" placeholder="Name *">
+                        <input type="text" placeholder="Nama *">
                         <input type="email" placeholder="Email *">
-                        <button class="theme-button-one">SUBSCRIBE</button>
+                        <button class="theme-button-one">BERLANGGANAN</button>
                     </form>
                 </div>
             </div> <!-- /.row -->
@@ -56,14 +56,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <p>&copy; Copyrights 2018. All Rights Reserved.</p>
+                    <p>&copy; Hak Cipta 2018. Semua Hak Dilindungi.</p>
                 </div>
                 <div class="col-md-6 col-12">
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Solutions</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="service.html">Solusi</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 /* CSS Document */
 
-/* 
+/*
     Created on   : 23/05/2018.
     Theme Name   : Charles-Business-Consulting HTML Template.
     Version      : 1.0.
     Author       : @CreativeGigs.
     Developed by : Jubayer al hasan. (jubayer.hasan1991@gmail.com)
-   
+
 */
 
 /* ------------------------------------------ */
@@ -78,7 +78,7 @@
 /*------------- Map -------------*/
 @import url("../vendor/sanzzy-map/dist/snazzy-info-window.min.css");
 
-/*** 
+/***
 
 ====================================================================
   Loading Transition
@@ -1899,7 +1899,7 @@ body .theme-button-one:hover {
 }
 /*---------------------- Theme Inner Banner -----------------*/
 .theme-inner-banner {
-    background: url(../images/home/inner-banner.jpg) no-repeat center center;
+    background: url(../images/tentang-kami/tm.png) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
     background-color: #707d9e;

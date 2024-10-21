@@ -1,6 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\TentangKami;
+use App\Models\VisiMisi;
+use App\Models\SejarahDesa;
+use App\Models\GeografisDesa;
+use App\Models\PotensiDesa;
+use App\Models\Demografi;
+use App\Models\produkHukum;
 
 use Illuminate\Http\Request;
 
@@ -13,27 +20,66 @@ class ProfilDesaController extends Controller
 
     public function tentangKami()
     {
-        return view('users.components.profil_desa.tentang-kami');
+        $tentangKami = TentangKami::first(); // Ambil data pertama dari tabel
+
+        if (!$tentangKami) {
+            // Jika tidak ada data, arahkan ke halaman lain atau tampilkan pesan error
+            return view('users.components.profil_desa.tentang-kami', ['tentangKami' => null]);
+        }
+
+        return view('users.components.profil_desa.tentang-kami', compact('tentangKami'));
     }
 
     public function visiMisi()
     {
-        return view('users.components.profil_desa.visi-misi');
+        $visiMisi = VisiMisi::first(); // Mengambil data pertama dari tabel
+
+        if (!$visiMisi) {
+            return view('users.components.profil_desa.visi-misi', ['visiMisi' => null]);
+        }
+
+        return view('users.components.profil_desa.visi-misi', compact('visiMisi'));
     }
+
 
     public function sejarahDesa()
     {
-        return view('users.components.profil_desa.sejarah-desa');
+        // Ambil data pertama dari tabel sejarah_desas
+        $sejarahDesa = SejarahDesa::first();
+
+        // Jika tidak ada data, kembalikan view dengan variabel sejarahDesa bernilai null
+        if (!$sejarahDesa) {
+            return view('users.components.profil_desa.sejarah-desa', ['sejarahDesa' => null]);
+        }
+
+        // Jika ada data, kembalikan view dengan data sejarahDesa
+        return view('users.components.profil_desa.sejarah-desa', compact('sejarahDesa'));
     }
 
     public function geografisDesa()
     {
-        return view('users.components.profil_desa.geografis-desa');
+        // Ambil semua data geografis desa
+        $geografisDesa = GeografisDesa::all();
+
+        // Cek jika tidak ada data geografis desa
+        if ($geografisDesa->isEmpty()) {
+            return view('users.components.profil_desa.geografis-desa', ['geografisDesa' => null]);
+        }
+
+        return view('users.components.profil_desa.geografis-desa', compact('geografisDesa'));
     }
+
+
 
     public function demografiDesa()
     {
-        return view('users.components.profil_desa.demografi-desa');
+        $demografi = Demografi::all();
+
+        if ($demografi->isEmpty()){
+            return view('users.components.profil_desa.demografi-desa', ['demografi' => null]);
+        }
+
+        return view('users.components.profil_desa.demografi-desa', compact('demografi'));
     }
 
     public function strukturOrganisasi()
@@ -87,11 +133,13 @@ class ProfilDesaController extends Controller
     }
     public function potensiDesa()
     {
-        return view('users.components.potensi_desa.potensi-desa');
+        $potensiDesa = PotensiDesa::all();
+        return view('users.components.potensi_desa.potensi-desa', compact('potensiDesa'));
     }
 
     public function produkHukum()
     {
-        return view('users.components.produk_hukum.produk-hukum');
+        $produkHukum = ProdukHukum::all();
+        return view('users.components.produk_hukum.produk-hukum', compact('produkHukum'));
     }
 }

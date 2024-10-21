@@ -7,7 +7,7 @@
     <title>Admin - Desa Lewiliang</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
 
     <!-- page css -->
 
@@ -19,7 +19,7 @@
 <body>
     <div class="app">
         <div class="layout">
-            {{-- header --}}
+            <!-- Header -->
             @include('admin.layouts.partials.header')
 
             <!-- Side Nav START -->
@@ -29,12 +29,11 @@
             <!-- Page Container START -->
             <div class="page-container">
                 <!-- Content Wrapper START -->
-
                 @yield('content')
                 <!-- Content Wrapper END -->
 
+                <!-- Footer -->
                 @include('admin.layouts.partials.footer')
-
             </div>
             <!-- Page Container END -->
 
@@ -48,7 +47,7 @@
         </div>
     </div>
 
-
+    <!-- JavaScript -->
     @include('admin.layouts.partials.js')
 
 </body>

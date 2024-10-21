@@ -1,34 +1,39 @@
 <header class="header-one">
     <div class="top-header">
-        <div class="container clearfix">
-            <div class="logo float-left"><a href="index"><img src="users/images/logo/logo.png" alt=""></a>
+        <div class="container clearfix d-flex align-items-center justify-content-between">
+            <div class="logo float-left"><a href="index"><img src="users/images/logo/logo.png" width="90px"
+                        alt=""></a>
             </div>
-            <div class="address-wrapper float-right">
+            <div class="address-wrapper">
                 <ul>
                     <li class="address">
                         <i class="icon flaticon-placeholder"></i>
-                        <h6>Address:</h6>
-                        <p>2A0, Queenstown St, USA.</p>
+                        <h6>Alamat:</h6>
+                        <p>Kecamatan Lewiliang, Kota Bogor, Jawa Barat</p>
                     </li>
                     <li class="address">
                         <i class="icon flaticon-multimedia"></i>
-                        <h6>Mail us:</h6>
-                        <p>supporthere@mail.com</p>
+                        <h6>Email :</h6>
+                        <p>DesaLewiliang@gmail.com</p>
                     </li>
-                    <li class="quotes"><a href="#">GET A QUOTES</a></li>
+                    {{-- <li><a href="index"><img src="users/images/logo/logo.png" width="90px" alt=""></a></li> --}}
                 </ul>
-            </div> <!-- /.address-wrapper -->
-        </div> <!-- /.container -->
-    </div> <!-- /.top-header -->
+            </div>
+            {{-- <div class="logo float-right"><a href="index"><img src="users/images/logo/logo.png" width="90px"
+                        alt=""></a>
+            </div> --}}
+        </div>
+    </div>
 
     <div class="theme-menu-wrapper">
         <div class="container">
-            <div class="bg-wrapper clearfix">
+            <div class="bg-wrapper clearfix d-flex justify-content-center">
                 <!-- ============== Menu Wrapper ================ -->
                 <div class="menu-wrapper float-left">
                     <nav id="mega-menu-holder" class="clearfix">
                         <ul class="clearfix">
-                            <li class="{{ Request::is('beranda') ? 'active' : '' }}">
+                            <li
+                                class="{{ Request::is('beranda', 'tentang-kami', 'visi-misi', 'sejarah-desa', 'geografis-desa', 'demografi-desa') ? 'active' : '' }}">
                                 <a href="{{ route('beranda') }}">Profil Desa</a>
                                 <ul class="dropdown">
                                     <li class="{{ Request::is('beranda') ? 'active' : '' }}"><a
@@ -85,27 +90,8 @@
                                 <a href="{{ route('produk.hukum') }}">Produk Hukum</a>
                             </li>
                         </ul>
-                    </nav> <!-- /#mega-menu-holder -->
-                </div> <!-- /.menu-wrapper -->
-
-                <div class="right-widget float-right">
-                    <ul>
-                        <li class="cart-icon">
-                            <a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
-                        </li>
-                        <li class="search-option">
-                            <div class="dropdown">
-                                <button type="button" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                                <form action="#" class="dropdown-menu">
-                                    <input type="text" placeholder="Enter Your Search">
-                                    <button><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </div> <!-- /.right-widget -->
+                    </nav>
+                </div>
             </div> <!-- /.bg-wrapper -->
         </div> <!-- /.container -->
     </div> <!-- /.theme-menu-wrapper -->

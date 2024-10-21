@@ -1,312 +1,149 @@
 <div class="side-nav">
     <div class="side-nav-inner">
         <ul class="side-nav-menu scrollable">
-            <li class="nav-item dropdown open">
+
+            <!-- Profil Menu -->
+            <li class="nav-item dropdown {{ request()->is('profil*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
                         <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">Dashboard</span>
+                    <span class="title">Profil</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="active">
-                        <a href="index.html">Default</a>
+                    <li>
+                        <a href="{{ url('index.html') }}">Default</a>
                     </li>
                     <li>
-                        <a href="index-crm.html">CRM</a>
+                        <a href="{{ route('tentangkami.index') }}">Tentang Kami</a>
                     </li>
                     <li>
-                        <a href="index-e-commerce.html">E-commerce</a>
+                        <a href="{{ route('dashboard.profil.visimisi.index') }}">Visi Misi</a>
                     </li>
                     <li>
-                        <a href="index-projects.html">Projects</a>
+                        <a href="{{ route('admin.dashboard.profil.sejarahdesa') }}">Sejarah Desa</a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.dashboard.profil.demografidesa') }}">Demografi Desa</a>
+                    </li>
+
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+
+            <!-- Pemerintahan Menu -->
+            <li class="nav-item dropdown {{ request()->is('pemerintahan*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-appstore"></i>
+                        <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">Apps</span>
+                    <span class="title">Pemerintahan</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="app-chat.html">Chat</a>
+                        <a href="#">Struktur Organisasi</a>
                     </li>
                     <li>
-                        <a href="app-file-manager.html">File Manager</a>
+                        <a href="#">Perangkat Desa</a>
                     </li>
                     <li>
-                        <a href="app-mail.html">Mail</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0);">
-                            <span>Projects</span>
-                            <span class="arrow">
-                                <i class="arrow-icon"></i>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="app-project-list.html">Project List</a>
-                            </li>
-                            <li>
-                                <a href="app-project-details.html">Project Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0);">
-                            <span>E-commerce</span>
-                            <span class="arrow">
-                                <i class="arrow-icon"></i>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="app-e-commerce-order-list.html">Orders List</a>
-                            </li>
-                            <li>
-                                <a href="app-e-commerce-products.html">Products</a>
-                            </li>
-                            <li>
-                                <a href="app-e-commerce-products-list.html">Products List</a>
-                            </li>
-                            <li>
-                                <a href="app-e-commerce-products-edit.html">Products Edit</a>
-                            </li>
-                        </ul>
+                        <a href="#">Lembaga Desa</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+
+            <!-- Layanan Menu -->
+            <li class="nav-item dropdown {{ request()->is('layanan*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-build"></i>
+                        <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">UI Elements</span>
+                    <span class="title">Layanan</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="avatar.html">Avatar</a>
-                    </li>
-                    <li>
-                        <a href="alert.html">Alert</a>
-                    </li>
-                    <li>
-                        <a href="badge.html">Badge</a>
-                    </li>
-                    <li>
-                        <a href="buttons.html">Buttons</a>
-                    </li>
-                    <li>
-                        <a href="cards.html">Cards</a>
-                    </li>
-                    <li>
-                        <a href="icons.html">Icons</a>
-                    </li>
-                    <li>
-                        <a href="lists.html">Lists</a>
-                    </li>
-                    <li>
-                        <a href="typography.html">Typography</a>
+                        <a href="#">Layanan</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+
+            <!-- Informasi Menu -->
+            <li class="nav-item dropdown {{ request()->is('informasi*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-hdd"></i>
+                        <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">Components</span>
+                    <span class="title">Informasi</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="accordion.html">Accordion</a>
+                        <a href="#">Berita</a>
                     </li>
                     <li>
-                        <a href="carousel.html">Carousel</a>
+                        <a href="#">Pengumuman</a>
                     </li>
                     <li>
-                        <a href="dropdown.html">Dropdown</a>
+                        <a href="#">Agenda Kegiatan</a>
                     </li>
                     <li>
-                        <a href="modals.html">Modals</a>
+                        <a href="#">Galeri</a>
                     </li>
                     <li>
-                        <a href="toasts.html">Toasts</a>
+                        <a href="#">Download</a>
                     </li>
                     <li>
-                        <a href="popover.html">Popover</a>
-                    </li>
-                    <li>
-                        <a href="slider-progress.html">Slider & Progress</a>
-                    </li>
-                    <li>
-                        <a href="tabs.html">Tabs</a>
-                    </li>
-                    <li>
-                        <a href="tooltips.html">Tooltips</a>
+                        <a href="#">APBD Desa</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+
+            <!-- Potensi Desa Menu -->
+            <li class="nav-item dropdown {{ request()->is('potensi-desa*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-form"></i>
+                        <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">Forms</span>
+                    <span class="title">Potensi Desa</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="form-elements.html">Form Elements</a>
-                    </li>
-                    <li>
-                        <a href="form-layouts.html">Form Layouts</a>
-                    </li>
-                    <li>
-                        <a href="form-validation.html">Form Validation</a>
+                        <a href="{{ route('admin.dashboard.potensi.potensiDesa') }}">Demografi Desa</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+
+            <!-- Produk Hukum Menu -->
+            <li class="nav-item dropdown {{ request()->is('produk-hukum*') ? 'open' : '' }}">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-table"></i>
+                        <i class="anticon anticon-dashboard"></i>
                     </span>
-                    <span class="title">Tables</span>
+                    <span class="title">Produk Hukum</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="basic-table.html">Basic Table</a>
-                    </li>
-                    <li>
-                        <a href="data-table.html">Data Table</a>
+                        <a href="{{ route('admin.dashboard.produkHukum.produkHukum') }}">Demografi Desa</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="javascript:void(0);">
-                    <span class="icon-holder">
-                        <i class="anticon anticon-pie-chart"></i>
-                    </span>
-                    <span class="title">Charts</span>
-                    <span class="arrow">
-                        <i class="arrow-icon"></i>
-                    </span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="chartist.html">Chartist</a>
-                    </li>
-                    <li>
-                        <a href="chartjs.html">ChartJs</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="javascript:void(0);">
-                    <span class="icon-holder">
-                        <i class="anticon anticon-file"></i>
-                    </span>
-                    <span class="title">Pages</span>
-                    <span class="arrow">
-                        <i class="arrow-icon"></i>
-                    </span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="profile.html">Profile</a>
-                    </li>
-                    <li>
-                        <a href="invoice.html">Invoice</a>
-                    </li>
-                    <li>
-                        <a href="members.html">Members</a>
-                    </li>
-                    <li>
-                        <a href="pricing.html">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="setting.html">Setting</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0);">
-                            <span>Blog</span>
-                            <span class="arrow">
-                                <i class="arrow-icon"></i>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-grid.html">Blog Grid</a>
-                            </li>
-                            <li>
-                                <a href="blog-list.html">Blog List</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="javascript:void(0);">
-                    <span class="icon-holder">
-                        <i class="anticon anticon-lock"></i>
-                    </span>
-                    <span class="title">Authentication</span>
-                    <span class="arrow">
-                        <i class="arrow-icon"></i>
-                    </span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="login-1.html">Login 1</a>
-                    </li>
-                    <li>
-                        <a href="login-2.html">Login 2</a>
-                    </li>
-                    <li>
-                        <a href="login-3.html">Login 3</a>
-                    </li>
-                    <li>
-                        <a href="sign-up-1.html">Sign Up 1</a>
-                    </li>
-                    <li>
-                        <a href="sign-up-2.html">Sign Up 2</a>
-                    </li>
-                    <li>
-                        <a href="sign-up-3.html">Sign Up 3</a>
-                    </li>
-                    <li>
-                        <a href="error-1.html">Error 1</a>
-                    </li>
-                    <li>
-                        <a href="error-2.html">Error 2</a>
-                    </li>
-                </ul>
-            </li>
+
         </ul>
     </div>
 </div>

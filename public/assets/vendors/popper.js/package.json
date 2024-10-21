@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/FezVrasta/popper.js/issues"
   },
-  "bundleDependencies": false,
+  "bundleDependencies": [],
   "contributors": [
     {
       "name": "Contributors",
@@ -83,5 +83,8 @@
   },
   "types": "index.d.ts",
   "unpkg": "dist/umd/popper.min.js",
-  "version": "1.15.0"
+  "version": "1.15.0",
+  "dependencies": {
+    "popper.js": "file:"
+  }
 }
